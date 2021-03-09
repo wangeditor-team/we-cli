@@ -7,9 +7,14 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn lint && tsc",
-    "lint": "eslint 'src/**/*'"
+    "lint": "eslint 'src/**/*'",
+    "dev": "yarn build && node ./dist/src/index.js"
+  },
+  "bin": {
+    "wecli": "./dist/src/index.js"
   },
   "devDependencies": {
+    "@types/inquirer": "^7.3.1",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
     "eslint": "^7.21.0",
@@ -18,5 +23,17 @@
     "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.2.1",
     "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^7.1.0",
+    "download-git-repo": "^3.0.2",
+    "execa": "^5.0.0",
+    "handlebars": "^4.7.7",
+    "inquirer": "^8.0.0",
+    "js-beautify": "^1.13.5",
+    "log": "^6.0.0",
+    "ora": "^5.3.0",
+    "shelljs": "^0.8.4"
   }
 }
