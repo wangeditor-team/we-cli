@@ -1,0 +1,8 @@
+{
+  "name": "we-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:wangeditor-team/we-cli.git",
+  "author": "haha<390519764@qq.com>",
+  "license": "MIT"
+}
