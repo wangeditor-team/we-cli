@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs",
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "outDir": "./dist",
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "importHelpers": true,
+        "resolveJsonModule": true
+    },
+    "include": [
+        "src"
+    ]
+}
