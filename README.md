@@ -1,4 +1,4 @@
-#we-cli
+# we-cli
 wangEditor 开发脚手架
 
 ### develop
