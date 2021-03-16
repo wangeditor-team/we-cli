@@ -1,4 +1,3 @@
-import getQuestion from '../question'
 import inquirer from 'inquirer'
 import runCommand from '../utils/runCommand'
 import { renderContent } from '../utils/renderContent'
@@ -30,9 +29,25 @@ async function create(name: string): Promise<void> {
     }
 
 
-    const question = getQuestion()
 
-    const { type, tool } = await inquirer.prompt(question)
+    const { type } = await inquirer.prompt({
+        type: 'list',
+        name: 'type',
+        message: '开发的类型',
+        choices: ["menu", "plugin"]
+    })
+
+    if (type === 'plugin') {
+        console.log('敬请期待～')
+    }
+
+    const { tool } = await inquirer.prompt({
+        type: 'list',
+        name: 'tool',
+        message: '选择包管理器',
+        choices: ["npm", "yarn"]
+    })
+
     const repos = {
         menu: 'wangeditor-team/menu-template'
     }
